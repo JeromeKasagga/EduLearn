@@ -4,7 +4,7 @@ body{
 
 .contact-bar{
     color: white;
-    font-size: 1em;
+    font-size: 0.9em;
     background-color: rgb(33, 40, 50);
     display: flex;
     gap: 200px;
@@ -30,12 +30,70 @@ body{
 
 .fa-phone, .fa-envelope{
     color: green;
+    cursor: pointer;
 }
 
 .social-media-icons{
     display: flex;
     align-items: center;
-    gap: 10px;
+    gap: 15px;
+    cursor: pointer;
+}
+
+
+.hero-section{
+    background: linear-gradient(to top, rgb(231, 238, 233), rgb(231, 242, 237));
+    height: 92vh;
+    width: 100vw;
+}
+
+.section-content{
+    width: 86vw;
+    margin-left: 7%;
+    padding-top: 30px;
+}
+
+.navbar{
+    /* padding: 0.5%; */
+    border: 2px solid rgb(197, 196, 196);
+    border-radius: 10px;
+    background-color: transparent;
+    display: flex;
+    gap: 120px;
+    align-items: center;
+    justify-content: center;
+}
+
+.logo{
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.logo-highlight{
+    color: green;
+    /* font-size: 2em; */
+}
+.logo-deco{
+    font-size: 2em;
+}
+
+.fa-graduation-cap{
+    color: green;
+}
+
+nav{
+    /* width: 30vw; */
+    /* background-color: aquamarine; */
+}
+
+a{
+    color: black;
+    text-decoration: none;
+    padding-left: 14px;
+    font-size: 1.2em;
+
+
 }
 
 
