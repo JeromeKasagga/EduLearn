@@ -1,10 +1,12 @@
 body{
     margin: 0%;
+    font-family: 'Poppins', sans-serif;
+      
 }
 
 .contact-bar{
     color: white;
-    font-size: 0.9em;
+    font-size: 0.8em;
     background-color: rgb(33, 40, 50);
     display: flex;
     gap: 200px;
@@ -43,7 +45,7 @@ body{
 
 .hero-section{
     background: linear-gradient(to top, rgb(231, 238, 233), rgb(231, 242, 237));
-    height: 92vh;
+    height: 95vh;
     width: 100vw;
 }
 
@@ -78,7 +80,7 @@ body{
     font-size: 2em;
 }
 
-.fa-graduation-cap{
+.fa-graduation-cap1{
     color: green;
 }
 
@@ -91,10 +93,122 @@ a{
     color: black;
     text-decoration: none;
     padding-left: 14px;
-    font-size: 1.2em;
+    font-size: 1em;
 
 
 }
 
+.sign-in-button{
+    border: 0px;
+    background-color: transparent;
+    font-size: 1em;
+    cursor: pointer;
+}
+
+.sign-up-button{
+    background-color: white;
+    border: 2px solid green;
+    border-radius: 10px;
+    font-size: 1em;
+    padding: 15px;
+    padding-left: 25px;
+    padding-right: 25px;
+    cursor: pointer;
+}
+
+.alignment-div{
+    margin-left: 4%;
+}
+.banner-section{
+    display: flex;
+    gap: 50px;
+}
+
+.customer-info{
+    padding: 10px;
+    margin-top: 5%;
+}
 
 
+.banner-text-1{
+    color: green;
+    letter-spacing: 1px;
+    font-size: 1.15em;
+    font-weight: 600;
+    margin: 0;
+    padding-bottom: 10px;
+}
+
+.banner-text-2{
+    font-size: 2.4em;
+    margin: 0;
+    padding-bottom: 32px;
+}
+
+.banner-text-higlight{
+    color: green;
+}
+
+.banner-text-3{
+    font-size: 1em;
+    margin: 0;
+    padding-bottom: 20px;
+    opacity: 50%;
+
+}
+
+.banner-button{
+    color: white;
+    font-size: 1.1em;
+    background-color: green;
+    padding: 15px;
+    padding-left: 30px;
+    padding-right: 30px;
+    border: 0px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.customer-image-background{
+    position: relative;
+    width: 45vw;
+    height: 74vh;
+    margin-top: 70px;
+    /* overflow: hidden; */
+}
+
+.number-of-courses {
+    color: white;
+    background-color: green;
+    margin-left: 10px;
+    margin-top: 10px;
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0px;
+}
+
+.number-of-courses h4 {
+    text-align: center;
+    font-size: 14px;
+    line-height: 1.2;
+}
+
+
+.fa-graduation-cap{
+    color: white;
+}
+
+
+.floating-image{
+    width: 450px;
+    position: absolute;
+    top: -240px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 2;
+}
