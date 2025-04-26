@@ -224,7 +224,9 @@ a{
 
 
 /* Section 2 */
+
 .search-content-section{
+    margin: 20px;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -264,9 +266,15 @@ a{
     border-radius: 10px;
 }
 
+.course-types-wrapper{
+    margin-top: 50px;
+    margin-bottom: 30px;
+}
+
 .course-types-div{
     background-color: var(--primary-color);
     padding: 30px;
+    border-radius: 10px;
     display: flex;
     gap: 20px;
     align-items: center;
@@ -324,5 +332,7 @@ a{
     background-color: var(--secondary-color);
     transition: all 0.3s ease;
 }
+
+
 
 
