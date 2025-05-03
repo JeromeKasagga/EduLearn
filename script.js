@@ -62,7 +62,7 @@ const courses = new Map([
     }],
     [6, {
         courseImage: "Resources/images/Entreprenuership.jpg",
-        instructorImage: "Resources/images/Teacher Face.jpg",
+        instructorImage: "Resources/images/Teacher Face.jpgclea",
         instructorName: "Brian Miller",
         category: "Business",
         title: "Entrepreneurship & Business Management Basics",
