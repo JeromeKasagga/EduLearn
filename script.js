@@ -1,4 +1,13 @@
-// script.js
+// Mobile Menu Toggle
+document.getElementById('menu-toggle')?.addEventListener('click', function() {
+    const menu = document.getElementById('mobile-menu');
+    menu.classList.toggle('hidden');
+    this.innerHTML = menu.classList.contains('hidden') 
+        ? '<i class="fas fa-bars"></i>' 
+        : '<i class="fas fa-times"></i>';
+});
+
+// Course Data
 const courses = new Map([
     [1, {
         courseImage: "Resources/images/Finance Image.jpg",
@@ -62,7 +71,7 @@ const courses = new Map([
     }],
     [6, {
         courseImage: "Resources/images/Entreprenuership.jpg",
-        instructorImage: "Resources/images/Teacher Face.jpgclea",
+        instructorImage: "Resources/images/Teacher Face 2.jpg",
         instructorName: "Brian Miller",
         category: "Business",
         title: "Entrepreneurship & Business Management Basics",
@@ -74,39 +83,53 @@ const courses = new Map([
     }]
 ]);
 
-// Get the container where we'll put the cards
-const courseDisplay = document.querySelector(".course-display");
-courseDisplay.innerHTML = '';
-
-// Create and append cards
-courses.forEach((course) => {
-    const card = document.createElement("div");
-    card.classList.add("course-card");
+// Generate Course Cards
+function generateCourses() {
+    const courseDisplay = document.getElementById("course-display");
+    if (!courseDisplay) return;
     
-    card.innerHTML = `
-        <img src="${course.courseImage}" alt="Course Image" class="course-image">
-        <div class="course-details">
-            <div class="instructor">
-                <img src="${course.instructorImage}" alt="Instructor" class="instructor-img">
-                <div class="instructor-info">
-                    <h4>${course.instructorName}</h4>
-                    <span class="category">${course.category}</span>
+    courseDisplay.innerHTML = '';
+    
+    courses.forEach((course) => {
+        const card = document.createElement("div");
+        card.className = "bg-white border border-gray-200 rounded-xl overflow-hidden shadow hover:shadow-lg transition-all hover:-translate-y-1";
+        
+        card.innerHTML = `
+            <div class="p-1.5">
+                <img src="${course.courseImage}" alt="Course" class="w-full h-52 object-cover rounded-lg">
+            </div>
+            <div class="p-5">
+                <div class="flex items-start gap-3 mb-3">
+                    <img src="${course.instructorImage}" alt="Instructor" class="w-10 h-10 rounded-full border-2 border-emerald-500">
+                    <div>
+                        <h4 class="font-medium text-gray-900">${course.instructorName}</h4>
+                        <span class="inline-block bg-emerald-100 text-emerald-800 text-xs px-2.5 py-1 rounded-full mt-1">
+                            ${course.category}
+                        </span>
+                    </div>
+                </div>
+                <h3 class="text-lg font-bold text-gray-900 mb-3 line-clamp-2">${course.title}</h3>
+                <div class="flex justify-between text-sm text-gray-500 py-3 border-y border-gray-100 mb-4">
+                    <span class="flex items-center gap-1"><i class="far fa-clock"></i> ${course.duration}</span>
+                    <span class="flex items-center gap-1"><i class="far fa-book-open"></i> ${course.lectures}</span>
+                </div>
+                <div class="flex justify-between items-center">
+                    <div>
+                        <span class="font-bold text-emerald-600">${course.price}</span>
+                        ${course.oldPrice ? `<span class="text-sm text-gray-500 line-through ml-2">${course.oldPrice}</span>` : ''}
+                    </div>
+                    <span class="bg-amber-100 text-amber-800 text-sm px-3 py-1 rounded-full flex items-center gap-1">
+                        ${course.rating} <i class="fas fa-star text-amber-500 text-xs"></i>
+                    </span>
                 </div>
             </div>
-            <p class="course-title">${course.title}</p>
-            <div class="course-meta">
-                <span>⏰ ${course.duration}</span>
-                <span>📚 ${course.lectures}</span>
-            </div>
-            <div class="course-footer">
-                <span class="price">${course.price} <span class="old-price">${course.oldPrice}</span></span>
-                <span class="rating">${course.rating} ⭐</span>
-            </div>
-        </div>
-    `;
-    
-    courseDisplay.appendChild(card);
-});
+        `;
+        
+        courseDisplay.appendChild(card);
+    });
+}
 
-// // Fix hero image
-// document.querySelector(".floating-image").src = "https://via.placeholder.com/600x400?text=Course+Hero+Image";
+// Initialize when DOM is loaded
+document.addEventListener('DOMContentLoaded', function() {
+    generateCourses();
+});
