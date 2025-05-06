@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EduLearn</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    keyframes: {
+                        float: {
+                            '0%, 100%': { transform: 'translateY(0)' },
+                            '50%': { transform: 'translateY(-10px)' },
+                        }
+                    },
+                    animation: {
+                        float: 'float 6s ease-in-out infinite',
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+
+<body class="font-sans bg-gray-50">
+    <!-- Contact Bar -->
+    <div class="bg-gray-900 text-white text-sm py-2 px-4 sticky top-0 z-50">
+        <div class="w-[86vw] ml-[7%] flex flex-col sm:flex-row items-center justify-between gap-2">
+            <p>All courses 28% off for <span class="text-emerald-400">Cool People</span></p>
+            <div class="flex items-center gap-4 sm:gap-6 md:gap-10">
+                <div class="flex items-center gap-2">
+                    <i class="fas fa-phone text-emerald-400"></i>
+                    <span class="hidden sm:inline">(970) 262-14313</span>
+                </div>
+                <div class="flex items-center gap-2">
+                    <i class="fas fa-envelope text-emerald-400"></i>
+                    <span class="hidden sm:inline">address@gmail.com</span>
+                </div>
+                <div class="flex gap-3">
+                    <i class="fab fa-facebook-f hover:text-emerald-400 cursor-pointer"></i>
+                    <i class="fab fa-twitter hover:text-emerald-400 cursor-pointer"></i>
+                    <i class="fab fa-skype hover:text-emerald-400 cursor-pointer"></i>
+                    <i class="fab fa-instagram hover:text-emerald-400 cursor-pointer"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Full-width gradient background with contained content -->
+    <div class="w-screen relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] bg-gradient-to-t from-[#E0F4E9] to-[#dce5dc] min-h-[95vh] pt-[30px]">
+        <div class="w-[86vw] ml-[7%]">
+            <!-- Navbar -->
+            <nav class="bg-white border border-gray-200 rounded-lg px-4 sm:px-6 py-4 mb-8 shadow-sm">
+                <div class="flex items-center justify-between">
+                    <div class="flex items-center">
+                        <i class="fas fa-graduation-cap text-emerald-600 text-3xl mr-2"></i>
+                        <span class="text-xl font-bold">Edu<span class="text-emerald-600">Learn</span></span>
+                    </div>
+
+                    <div class="hidden md:flex items-center space-x-6">
+                        <a href="#" class="text-gray-800 hover:text-emerald-600">Home</a>
+                        <a href="#" class="text-gray-800 hover:text-emerald-600">All Courses</a>
+                        <a href="#" class="text-gray-800 hover:text-emerald-600">Pages</a>
+                        <a href="#" class="text-gray-800 hover:text-emerald-600">Blog</a>
+                        <a href="#" class="text-gray-800 hover:text-emerald-600">Contact</a>
+                    </div>
+
+                    <div class="hidden md:flex items-center space-x-4">
+                        <button class="text-gray-800 hover:text-emerald-600">Sign In</button>
+                        <button class="bg-white text-emerald-600 border border-emerald-600 hover:bg-emerald-600 hover:text-white px-4 py-2 rounded-lg">
+                            Sign Up
+                        </button>
+                    </div>
+
+                    <button class="md:hidden text-gray-800 text-xl" id="menu-toggle">
+                        <i class="fas fa-bars"></i>
+                    </button>
+                </div>
+
+                <!-- Mobile Menu -->
+                <div class="md:hidden hidden mt-4 pt-4 border-t" id="mobile-menu">
+                    <div class="flex flex-col space-y-3">
+                        <a href="#" class="block py-2 hover:text-emerald-600">Home</a>
+                        <a href="#" class="block py-2 hover:text-emerald-600">All Courses</a>
+                        <a href="#" class="block py-2 hover:text-emerald-600">Pages</a>
+                        <a href="#" class="block py-2 hover:text-emerald-600">Blog</a>
+                        <a href="#" class="block py-2 hover:text-emerald-600">Contact</a>
+                        <div class="pt-2 space-y-3">
+                            <button class="block w-full text-left py-2 hover:text-emerald-600">Sign In</button>
+                            <button class="w-full bg-emerald-600 text-white px-4 py-2 rounded-lg">
+                                Sign Up
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+
+            <!-- Hero Section -->
+            <section class="flex flex-col md:flex-row items-center gap-8 lg:gap-10 mb-12">
+                <div class="md:w-1/2 text-center md:text-left relative z-10 md:-mt-10">
+                    <p class="text-emerald-600 font-semibold text-sm uppercase tracking-wider">Start your favorite course</p>
+                    <h1 class="text-3xl md:text-4xl lg:text-5xl font-bold mt-4 mb-6 leading-tight">
+                        Now learning from anywhere,<br>
+                        and build your <span class="text-emerald-600 relative">
+                            bright career
+                            <span class="absolute bottom-1 left-0 w-full h-2 bg-emerald-200 opacity-50 -z-10"></span>
+                        </span>
+                    </h1>
+                    <p class="text-gray-600 mb-8 max-w-lg mx-auto md:mx-0">
+                        It has survived not only five centuries but also the leap into electronic typesetting.
+                    </p>
+                    <button class="bg-emerald-600 hover:bg-emerald-700 text-white px-6 py-3 sm:px-8 sm:py-3 rounded-lg shadow-lg transition-all">
+                        Start A Course
+                    </button>
+                </div>
+
+                <div class="md:w-1/2 relative mt-0 flex justify-center">
+                    <div class="absolute top-8 left-4 sm:left-8 md:left-10 bg-emerald-600 text-white w-20 h-20 sm:w-24 sm:h-24 md:w-28 md:h-28 rounded-full flex flex-col items-center justify-center shadow-lg z-10">
+                        <i class="fas fa-graduation-cap text-lg sm:text-xl mb-1"></i>
+                        <span class="text-xs sm:text-sm text-center">1348<br>courses</span>
+                    </div>
+                    <img src="Resources/images/Banner-image.png" alt="Learning" 
+                         class="w-full max-w-xs sm:max-w-sm md:max-w-md mx-auto relative animate-float -mt-32 sm:-mt-40 md:-mt-48 lg:-mt-44">
+                </div>
+            </section>
+        </div>
+    </div>
+
+    <!-- Main Content Area -->
+    <div class="w-[86vw] ml-[7%] pt-8">
+        <!-- Courses Section -->
+        <section class="py-8">
+            <div class="flex flex-col sm:flex-row justify-between items-center mb-8 gap-4">
+                <h2 class="text-2xl font-bold text-center sm:text-left">
+                    All <span class="text-emerald-600">Courses</span> of Edu<span class="text-emerald-600">Learn</span>
+                </h2>
+                <div class="relative w-full sm:w-80 md:w-96">
+                    <input type="text" placeholder="Search your course..."
+                           class="w-full pl-4 pr-10 py-3 h-12 sm:h-14 border border-gray-300 rounded-lg focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500">
+                    <i class="fas fa-search absolute right-3 top-3 sm:top-4 text-gray-400"></i>
+                </div>
+            </div>
+
+            <!-- Course Categories -->
+            <div class="bg-emerald-100 rounded-lg px-4 sm:px-6 py-3 sm:py-4 mb-10 overflow-x-auto">
+                <div class="flex items-center space-x-3 sm:space-x-4 min-w-max">
+                    <button class="bg-white border border-gray-300 hover:border-emerald-600 hover:text-emerald-600 px-4 sm:px-6 py-1 sm:py-2 rounded-lg whitespace-nowrap transition-all text-sm sm:text-base">
+                        Development
+                    </button>
+                    <button class="bg-white border border-gray-300 hover:border-emerald-600 hover:text-emerald-600 px-4 sm:px-6 py-1 sm:py-2 rounded-lg whitespace-nowrap transition-all text-sm sm:text-base">
+                        UI/UX Design
+                    </button>
+                    <button class="bg-white border border-gray-300 hover:border-emerald-600 hover:text-emerald-600 px-4 sm:px-6 py-1 sm:py-2 rounded-lg whitespace-nowrap transition-all text-sm sm:text-base">
+                        Data Science
+                    </button>
+                    <button class="bg-white border border-gray-300 hover:border-emerald-600 hover:text-emerald-600 px-4 sm:px-6 py-1 sm:py-2 rounded-lg whitespace-nowrap transition-all text-sm sm:text-base">
+                        Business
+                    </button>
+                    <button class="bg-white border border-gray-300 hover:border-emerald-600 hover:text-emerald-600 px-4 sm:px-6 py-1 sm:py-2 rounded-lg whitespace-nowrap transition-all text-sm sm:text-base">
+                        Financial
+                    </button>
+                    <button class="bg-white border border-gray-300 hover:border-emerald-600 hover:text-emerald-600 px-4 sm:px-6 py-1 sm:py-2 rounded-lg whitespace-nowrap transition-all text-sm sm:text-base">
+                        Marketing
+                    </button>
+                    <button class="bg-white border border-gray-300 hover:border-emerald-600 hover:text-emerald-600 px-4 sm:px-6 py-1 sm:py-2 rounded-lg whitespace-nowrap transition-all text-sm sm:text-base">
+                        Bitcoin
+                    </button>
+                </div>
+            </div>
+
+            <!-- Course Cards Container -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8" id="course-display">
+                <!-- Courses will be inserted here by JavaScript -->
+            </div>
+
+            <div class="text-center mt-12">
+                <button class="bg-emerald-100 text-emerald-600 border border-emerald-600 hover:bg-emerald-600 hover:text-white px-6 py-3 rounded-lg transition-all">
+                    Other Courses
+                </button>
+            </div>
+        </section>
+
+        <!-- Instructor CTA -->
+        <section class="py-8 sm:py-12 bg-emerald-50 rounded-xl my-8">
+            <div class="bg-emerald-100 rounded-2xl p-6 sm:p-8 md:p-12 flex flex-col md:flex-row justify-between items-center gap-4">
+                <div class="text-center md:text-left">
+                    <p class="text-emerald-600 font-semibold">Become an instructor</p>
+                    <h3 class="text-xl sm:text-2xl md:text-3xl font-light mt-2">
+                        You can join with Edulearn as <span class="text-emerald-600 font-medium">an instructor?</span>
+                    </h3>
+                </div>
+                <button class="bg-emerald-600 hover:bg-emerald-700 text-white px-6 py-2 sm:px-8 sm:py-3 rounded-lg shadow whitespace-nowrap">
+                    Join Now
+                </button>
+            </div>
+        </section>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-emerald-600 text-white py-4">
+        <div class="text-center text-sm">
+            © 2025 Edulearn.org
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
